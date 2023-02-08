@@ -230,6 +230,11 @@ class PhotosService:
     def all(self):
         """Returns all photos."""
         return self.albums["All Photos"]
+    
+    @property
+    def deleted(self):
+        """Returns deleted photos."""
+        return self.albums["Recently Deleted"]
 
 
 class PhotoAlbum:
