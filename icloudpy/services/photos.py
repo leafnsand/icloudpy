@@ -667,9 +667,11 @@ class PhotoAsset:
                     if size_entry:
                         version["size"] = size_entry["value"]["size"]
                         version["url"] = size_entry["value"]["downloadURL"]
+                        version["checksum"] = size_entry["value"]["fileChecksum"]
                     else:
                         version["size"] = None
                         version["url"] = None
+                        version["checksum"] = None
 
                     type_entry = fields.get(f"{prefix}FileType")
                     if type_entry:
